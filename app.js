@@ -1,7 +1,10 @@
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 8081;
-
+app.get('/',function(req,res){
+    res.send("Append a date or unix time to the end of this link...");
+    
+})
 app.use(function(req,res){
     var string = req.originalUrl.split('');
     string.shift();
